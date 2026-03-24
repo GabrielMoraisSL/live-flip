@@ -5,9 +5,15 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  
+  --font-grotesk: var(--font-space-grotesk);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
+  --font-sans: var(--font-space-grotesk);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -49,6 +55,10 @@
 }
 
 :root {
+
+  --brand-primary: oklch(0.6321 0.2018 254.09);
+  --brand-secondary: oklch(0.7506 0.1287 258.75);
+
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -117,14 +127,50 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(59, 59, 59, 0.9);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-primary);
+  border-radius: 999px;
+}
+
+.shadow-hard {
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.6);
+}
+
+.shadow-hard-blue {
+  box-shadow: 6px 6px 0px var(--color-brand-primary);
+}
+
+.shadow-hard-white {
+  box-shadow: 6px 6px 0px rgba(255, 255, 255, 0.9);
+}
+
+.shadow-hard-gray {
+  box-shadow: 6px 6px 0px rgba(128, 128, 128, 0.9);
+}
+
 @layer base {
+  button {
+    font-family: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+  }
   * {
     @apply border-border outline-ring/50;
   }
   body {
+    font-family: var(--font-space-grotesk);
     @apply bg-background text-foreground;
   }
   html {
-    @apply font-sans;
+    font-family: var(--font-space-grotesk);
   }
 }

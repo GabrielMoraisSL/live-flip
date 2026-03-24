@@ -10,7 +10,7 @@ export const SIDEBAR_OPTIONS = [
     route: Routes.Feed,
   },
   {
-    icon: <FaUser />,
+    icon: <FaUser className="size-4! mx-px" />,
     label: "Perfil",
     route: Routes.Profile,
   },
@@ -20,3 +20,5 @@ export const SIDEBAR_OPTIONS = [
     route: Routes.Achievements,
   },
 ];
+
+export type SidebarOption = (typeof SIDEBAR_OPTIONS)[number];

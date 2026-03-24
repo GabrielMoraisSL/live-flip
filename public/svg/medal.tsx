@@ -11,11 +11,10 @@ export const MedalIcon: React.FC<IconProps> = ({
   ...props
 }) => {
   return (
-    // biome-ignore lint/a11y/noSvgWithoutTitle: <explanation>
     <svg
-      width="1244"
-      height="809"
-      viewBox="0 0 1244 809"
+      width={size}
+      height={size}
+      viewBox="0 0 10 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
