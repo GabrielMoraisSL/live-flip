@@ -62,18 +62,18 @@ export default function PublicationCard({
           title={title}
           allow="accelerometer; autoplay; picture-in-picture"
         />
-        <Row className="gap-6 items-end p-10">
+        <Row className="gap-6 items-end justify-between p-10">
           <Column className="gap-6">
             <p className="text-5xl text-white italic">{title}</p>
             <Row className="gap-2">
-              <span className="text-brand-primary">@{user}</span>
+              <span className="text-brand-primary hover:underline cursor-pointer">@{user}</span>
               <div className="size-1 bg-brand-primary" />
               <span className="text-gray-400">{localization}</span>
             </Row>
           </Column>
           <button
             className={cn(
-              "bg-neutral-800 border border-gray-600 text-white size-15 min-w-15 transition-colors",
+              "bg-neutral-800 border cursor-pointer border-gray-600 text-white size-15 min-w-15 transition-colors",
               hasLiked && "border-brand-primary",
             )}
             onClick={handleLike}

@@ -1,5 +1,5 @@
 export enum Routes {
-  Feed = "/feed",
+  Feed = "/publicacoes",
   Profile = "/perfil",
   Achievements = "/conquistas",
   Login = "/login",
