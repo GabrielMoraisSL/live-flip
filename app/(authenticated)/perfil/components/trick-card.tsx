@@ -16,15 +16,15 @@ export default function TrickCard({
   points,
 }: TrickCardProps) {
   return (
-    <Column className='gap-2 border shadow-hard relative bg-neutral-800 border-gray-600'>
+    <Column className='gap-2 min-w-34 p-4 pt-6 text-center items-center border shadow-hard relative bg-neutral-800 border-gray-600'>
       {isNew && (
-        <p className='text-white text-sm px-4 absolute right-0 top-0 py-1 bg-brand-primary w-fit'>
+        <p className='text-white text-[10px] px-2 absolute -right-2 -top-2 rotate-2 py-1 bg-brand-primary w-fit'>
           Nova conquista!
         </p>
       )}
       <FaFire
         className={cn(
-          'size-5 text-gray-300',
+          'size-6 text-gray-300',
           isUnlocked && 'text-brand-primary',
         )}
       />
