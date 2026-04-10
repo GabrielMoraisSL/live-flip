@@ -63,7 +63,7 @@ export default function TricksList({ lastUnLockedTrick }: TricksListProps) {
         {mockTricks.map((trickGroup, idx) => (
           <Column className='gap-4 uppercase'>
             <Row className='text-brand-primary gap-4 text-xl'>
-              <span className='tracking-widest'>
+              <span className='tracking-[0.2em]'>
                 {idx + 1}_{trickGroup.name}
               </span>
               <div className='w-full h-px bg-neutral-800' />

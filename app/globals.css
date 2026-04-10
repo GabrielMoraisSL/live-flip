@@ -8,6 +8,8 @@
 
   --color-brand-primary: var(--brand-primary);
   --color-brand-secondary: var(--brand-secondary);
+  --color-brand-bege-claro: var(--brand-bege-claro);
+  --color-brand-bege-escuro: var(--brand-bege-escuro);
   
   --font-grotesk: var(--font-space-grotesk);
 
@@ -58,6 +60,9 @@
 
   --brand-primary: oklch(0.6321 0.2018 254.09);
   --brand-secondary: oklch(0.7506 0.1287 258.75);
+
+  --brand-bege-claro: oklch(0.916 0.039 68.6);
+  --brand-bege-escuro: oklch(48.202% 0.09764 47.49);
 
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -141,7 +146,7 @@
 }
 
 .shadow-hard {
-  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 6px 6px 0px rgb(0, 0, 0);
 }
 
 .shadow-hard-blue {
