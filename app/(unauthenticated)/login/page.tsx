@@ -6,12 +6,12 @@ import Input from "./components/input";
 
 export default function Login() {
   return (
-    <Column className="grow uppercase bg-linear-to-br from-brand-bege-claro font-grotesk from-50% to-brand-bege-escuro items-center justify-center">
+    <Column className="grow uppercase bg-linear-to-br from-neutral-700 font-grotesk from-50% to-neutral-900 items-center justify-center">
       <Column className="gap-14 items-center">
         <p className="pl-6 pr-5 italic py-3 bg-brand-secondary text-center font-bold shadow-hard text-6xl -rotate-4">
           LIVEFLIP
         </p>
-        <Column className="bg-neutral-900 text-gray-300 gap-10 p-10 border-4 border-neutral-950 w-xl">
+        <Column className="bg-neutral-900 text-gray-300 gap-10 p-10 shadow-hard w-xl">
           <Column className="gap-1">
             <Row className="text-xs text-brand-secondary font-bold">
               <FaShieldHalved className="mb-px" />
