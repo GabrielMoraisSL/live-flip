@@ -1,21 +1,21 @@
-import { Column } from "@/components/column";
-import KPIs from "./components/kpis";
-import PersonalData from "./components/personal-data";
-import TricksList from "./components/tricks-list";
+import { Column } from '@/components/column';
+import KPIs from './components/kpis';
+import PersonalData from './components/personal-data';
+import TricksList from './components/tricks-list';
 export default function Profile() {
   const user = {
-    username: "john_doe",
-    name: "John Doe",
-    location: "New York, USA",
-    instance: "regular",
-    photoUrl: "",
+    username: 'john_doe',
+    name: 'John Doe',
+    location: 'New York, USA',
+    instance: 'regular',
+    photoUrl: '',
     kpis: {
       position: 12,
       points: 1500,
       totalLikes: 300,
       totalAchievements: 20,
     },
-    lastUnLockedTrick: { name: "Treflip", date: "2024-06-01", points: 500 },
+    lastUnLockedTrick: { name: 'Treflip', date: '2024-06-01', points: 500 },
   };
   const {
     username,
@@ -28,8 +28,8 @@ export default function Profile() {
   } = user;
 
   return (
-    <Column className="font-bold 2xl:flex-row gap-10 m-10 w-full border-b-2 border-neutral-700 pb-10">
-      <Column className="gap-6 w-full">
+    <Column className='font-bold 2xl:flex-row gap-10 p-10 2xl:p-0 2xl:m-10 w-full border-b-2 border-neutral-700 pb-10 overflow-auto'>
+      <Column className='gap-6 w-full'>
         <PersonalData {...{ username, name, location, instance, photoUrl }} />
         <KPIs {...kpis} lastUnLockedTrick={lastUnLockedTrick} />
       </Column>
