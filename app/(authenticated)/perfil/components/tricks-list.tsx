@@ -59,7 +59,7 @@ export default function TricksList({ lastUnLockedTrick }: TricksListProps) {
           {dayjs(lastUnLockedTrick.date).format('DD.MM.YYYY')}
         </span>
       </Row>
-      <Column className='gap-10 overflow-auto pr-4 pb-2'>
+      <Column className='gap-10 overflow-auto pr-4 pb-2 2xl:pb-6'>
         {mockTricks.map((trickGroup, idx) => (
           <Column className='gap-4 uppercase'>
             <Row className='text-brand-primary gap-4 text-xl'>
