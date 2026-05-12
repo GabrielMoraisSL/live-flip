@@ -1,8 +1,9 @@
-import { Column } from "@/components/column";
-import { Header } from "@/components/header";
-import { Row } from "@/components/row";
-import { Sidebar } from "@/components/sidebar/sidebar";
-import { ReactNode } from "react";
+import BottomMenu from '@/components/bottom-menu/bottom-menu';
+import { Column } from '@/components/column';
+import { Row } from '@/components/row';
+import { Header } from '@/features/header/components';
+import { Sidebar } from '@/features/sidebar/components';
+import { ReactNode } from 'react';
 
 export default function AuthenticatedLayout({
   children,
@@ -10,12 +11,13 @@ export default function AuthenticatedLayout({
   children: ReactNode;
 }) {
   return (
-    <Column className="gap-0 h-screen bg-neutral-900">
+    <Column className='gap-0 h-dvh sm:h-screen bg-neutral-950 overflow-hidden'>
       <Header />
-      <Row className="flex-1 min-h-0 items-stretch">
+      <Row className='flex-1 min-h-0 items-stretch'>
         <Sidebar />
-        <div className="flex-1 min-h-0 flex overflow-hidden">{children}</div>
+        <div className='flex-1 min-h-0 flex overflow-hidden'>{children}</div>
       </Row>
+      <BottomMenu />
     </Column>
   );
 }
