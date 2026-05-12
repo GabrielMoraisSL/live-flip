@@ -1,7 +1,5 @@
 import { Column } from '@/components/column';
-import KPIs from './components/kpis';
-import PersonalData from './components/personal-data';
-import TricksList from './components/tricks-list';
+import { KPIs, PersonalData, TricksList } from '@/features/profile/components';
 export default function Profile() {
   const user = {
     username: 'john_doe',
