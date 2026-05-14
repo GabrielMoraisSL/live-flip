@@ -1,5 +1,5 @@
 import { Column } from "@/components/column";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import UserImage from "@/public/teste-publi.jpg";
 
 interface PersonalDataProps {
@@ -7,7 +7,7 @@ interface PersonalDataProps {
   name: string;
   location: string;
   instance: string;
-  photoUrl?: string;
+  photoUrl?: string | StaticImageData;
 }
 
 export default function PersonalData({
