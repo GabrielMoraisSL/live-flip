@@ -16,8 +16,8 @@ export default function SidebarItem({ option }: SidebarItemProps) {
     <Row
       onClick={() => router.push(option.route)}
       className={cn(
-        'gap-3 [&_svg]:size-5 px-6 py-4 font-bold tracking-widest',
-        activeOption === option.route && 'bg-brand-primary text-black',
+        'gap-3 [&_svg]:size-5 px-6 py-4 max-sm:text-sm font-bold transition-colors tracking-widest hover:bg-neutral-900 cursor-pointer select-none',
+        activeOption === option.route && 'bg-brand-primary! text-black',
         option.hideOnDesktop && 'lg:hidden',
       )}
     >
