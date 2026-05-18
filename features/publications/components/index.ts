@@ -1,6 +1,6 @@
-import Timeline from './timeline';
-import UsersList from './users-list';
-import InfoCard from './info-card';
-import PublicationCard from './public-card';
+import Timeline from './timeline.component';
+import UsersList from './users-list.component';
+import InfoCard from './info-card.component';
+import PublicationCard from './public-card.component';
 
 export { Timeline, UsersList, InfoCard, PublicationCard };

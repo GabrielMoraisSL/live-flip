@@ -1,4 +1,4 @@
-import { Column } from '@/components/column';
+import { Column } from '@/components/column.component';
 
 export default function Loading() {
   return (

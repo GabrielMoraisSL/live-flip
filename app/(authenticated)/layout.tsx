@@ -1,6 +1,6 @@
-import BottomMenu from '@/components/bottom-menu/bottom-menu';
-import { Column } from '@/components/column';
-import { Row } from '@/components/row';
+import BottomMenu from '@/components/bottom-menu/bottom-menu.component';
+import { Column } from '@/components/column.component';
+import { Row } from '@/components/row.component';
 import { Header } from '@/features/header/components';
 import { Sidebar } from '@/features/sidebar/components';
 import { ReactNode } from 'react';
