@@ -1,7 +1,7 @@
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/cn.utils';
 import { usePathname, useRouter } from 'next/navigation';
-import { Column } from '../column';
-import { ScreensItemsType } from '@/features/sidebar/constants/screens-items';
+import { Column } from '../column.component';
+import { ScreensItemsType } from '@/features/sidebar/constants/screens-items.constant';
 
 export default function MenuItem({ icon, label, route }: ScreensItemsType) {
   const router = useRouter();

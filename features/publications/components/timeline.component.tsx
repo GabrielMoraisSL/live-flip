@@ -1,9 +1,9 @@
-import { Column } from '@/components/column';
-import { Row } from '@/components/row';
-import { MOCK_PUBLICATIONS } from '@/features/publications/mocks/publications';
-import AddPublicationButton from './add-publication-button';
-import InfoCard from './info-card';
-import PublicationCard from './public-card';
+import { Column } from '@/components/column.component';
+import { Row } from '@/components/row.component';
+import { MOCK_PUBLICATIONS } from '@/features/publications/mocks/publications.mock';
+import AddPublicationButton from './add-publication-button.component';
+import InfoCard from './info-card.component';
+import PublicationCard from './public-card.component';
 
 export default function Timeline() {
   return (

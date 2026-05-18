@@ -1,6 +1,6 @@
-import KPIs from './kpis';
-import PersonalData from './personal-data';
-import TrickCard from './trick-card';
-import TricksList from './tricks-list';
+import KPIs from './kpis.component';
+import PersonalData from './personal-data.component';
+import TrickCard from './trick-card.component';
+import TricksList from './tricks-list.component';
 
 export { KPIs, PersonalData, TrickCard, TricksList };

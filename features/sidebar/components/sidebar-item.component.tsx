@@ -1,9 +1,9 @@
 'use client';
 
 import { usePathname, useRouter } from 'next/navigation';
-import { cn } from '@/lib/utils';
-import { ScreensItemsType } from '../constants/screens-items';
-import { Row } from '@/components/row';
+import { cn } from '@/lib/cn.utils';
+import { ScreensItemsType } from '../constants/screens-items.constant';
+import { Row } from '@/components/row.component';
 
 interface SidebarItemProps {
   option: ScreensItemsType;

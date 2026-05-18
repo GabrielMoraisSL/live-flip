@@ -1,4 +1,4 @@
-import { SystemEnums } from '@/enums/system-enums';
+import { SystemEnums } from '@/enums/system.enum';
 import { create } from 'zustand';
 
 type SearchInputIds = SystemEnums.EnumsIds.SearchInput;

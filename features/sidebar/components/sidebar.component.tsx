@@ -1,12 +1,12 @@
 'use client';
 import { FaSignOutAlt } from 'react-icons/fa';
-import SidebarItem from './sidebar-item';
-import { cn } from '@/lib/utils';
-import { useSidebarStore } from '@/features/sidebar/stores/store-sidebar';
-import { Column } from '@/components/column';
-import { Row } from '@/components/row';
+import SidebarItem from './sidebar-item.component';
+import { cn } from '@/lib/cn.utils';
+import { useSidebarStore } from '@/features/sidebar/stores/sidebar.store';
+import { Column } from '@/components/column.component';
+import { Row } from '@/components/row.component';
 import { SCREENS_ITEMS } from '../constants';
-import DialogOverlay from '@/components/dialog-overlay';
+import DialogOverlay from '@/components/dialog-overlay.component';
 import { USER_MOCK } from '@/features/profile/mocks';
 import Image from 'next/image';
 
@@ -35,7 +35,9 @@ export const Sidebar = () => {
               />
             </div>
           </div>
-          <p className='text-xl sm:text-2xl text-brand-secondary'>@{username}</p>
+          <p className='text-xl sm:text-2xl text-brand-secondary'>
+            @{username}
+          </p>
           <p className='text-sm text-neutral-500'>{instance}</p>
           <p className='text-sm text-neutral-500'>{location}</p>
         </Column>

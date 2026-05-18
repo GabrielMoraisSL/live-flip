@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/cn.utils';
 import { forwardRef } from 'react';
 
 export const Column = forwardRef<

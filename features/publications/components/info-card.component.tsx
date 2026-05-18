@@ -1,4 +1,4 @@
-import { Row } from '@/components/row';
+import { Row } from '@/components/row.component';
 import { FaTrophy } from 'react-icons/fa6';
 import { HiOutlineSparkles } from 'react-icons/hi';
 

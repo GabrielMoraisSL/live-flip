@@ -1,5 +1,5 @@
-import { Column } from '@/components/column';
-import { cn } from '@/lib/utils';
+import { Column } from '@/components/column.component';
+import { cn } from '@/lib/cn.utils';
 import { FaFire } from 'react-icons/fa6';
 
 interface TrickCardProps {

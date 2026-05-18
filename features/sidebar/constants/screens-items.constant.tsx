@@ -1,4 +1,4 @@
-import { SystemEnums } from '@/enums/system-enums';
+import { SystemEnums } from '@/enums/system.enum';
 import { MedalIcon } from '@/public/svg/medal';
 import { AiFillHome } from 'react-icons/ai';
 import { BiMedal } from 'react-icons/bi';

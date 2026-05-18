@@ -1,8 +1,8 @@
-import { Column } from '@/components/column';
-import { Row } from '@/components/row';
+import { Column } from '@/components/column.component';
+import { Row } from '@/components/row.component';
 import { FaArrowRight, FaShieldHalved } from 'react-icons/fa6';
-import Input from '../../../components/input';
-import { Button } from '@/components/button';
+import Input from '../../../components/input.component';
+import { Button } from '@/components/button.component';
 
 export default function Login() {
   return (

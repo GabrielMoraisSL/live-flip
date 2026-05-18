@@ -1,5 +1,5 @@
-import { Column } from "@/components/column";
-import { Row } from "@/components/row";
+import { Column } from "@/components/column.component";
+import { Row } from "@/components/row.component";
 import { MedalIcon } from "@/public/svg/medal";
 import { FaFire } from "react-icons/fa6";
 

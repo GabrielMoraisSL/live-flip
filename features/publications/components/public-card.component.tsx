@@ -1,10 +1,10 @@
 'use client';
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/cn.utils';
 import { useRef, useState } from 'react';
 import { FaFire, FaLocationDot } from 'react-icons/fa6';
-import { Column } from '../../../components/column';
-import { Row } from '../../../components/row';
-import PublicCardSkeleton from './public-card-skeleton';
+import { Column } from '../../../components/column.component';
+import { Row } from '../../../components/row.component';
+import PublicCardSkeleton from './public-card-skeleton.component';
 import { IoMdPlay } from 'react-icons/io';
 import { MdPlayArrow } from 'react-icons/md';
 

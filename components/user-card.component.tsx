@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
-import { Column } from "./column";
-import { Row } from "./row";
+import { Column } from "./column.component";
+import { Row } from "./row.component";
 import { FaLocationPin } from "react-icons/fa6";
 import { BiRightArrowAlt } from "react-icons/bi";
 import { IoMdPin } from "react-icons/io";

@@ -1,4 +1,4 @@
-import { Column } from "@/components/column";
+import { Column } from "@/components/column.component";
 import Image, { StaticImageData } from "next/image";
 import UserImage from "@/public/teste-publi.jpg";
 

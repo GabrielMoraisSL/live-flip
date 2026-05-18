@@ -1,3 +1,3 @@
-import { MOCK_PUBLICATIONS } from './publications';
+import { MOCK_PUBLICATIONS } from './publications.mock';
 
-export {MOCK_PUBLICATIONS} 
+export { MOCK_PUBLICATIONS };

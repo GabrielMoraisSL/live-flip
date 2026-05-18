@@ -1,6 +1,6 @@
 'use client';
-import { Row } from '@/components/row';
-import { cn } from '@/lib/utils';
+import { Row } from '@/components/row.component';
+import { cn } from '@/lib/cn.utils';
 import { useEffect, useRef, useState } from 'react';
 import { FaPlus } from 'react-icons/fa6';
 
@@ -27,7 +27,13 @@ export default function AddPublicationButton() {
           Adicionar
         </Row>
       </button>
-      <button className={cn("hidden", !isVisible && 'block px-6 py-2 cursor-pointer bg-gray-100 rounded-full font-bold text-nowrap uppercase fixed bottom-18 xl:bottom-10 right-5 xl:right-10 z-30 shadow-lg text-xl xl:text-lg p-4 animate-bounce-in transition-all')}>
+      <button
+        className={cn(
+          'hidden',
+          !isVisible &&
+            'block px-6 py-2 cursor-pointer bg-gray-100 rounded-full font-bold text-nowrap uppercase fixed bottom-18 xl:bottom-10 right-5 xl:right-10 z-30 shadow-lg text-xl xl:text-lg p-4 animate-bounce-in transition-all',
+        )}
+      >
         <Row>
           <FaPlus className='animate-spin-once' />
           <span className='hidden xl:block'>Adicionar</span>

@@ -1,4 +1,4 @@
-import { Header } from './header';
-import SearchInput from '../../../components/search-input';
+import { Header } from './header.component';
+import SearchInput from '../../../components/search-input.component';
 
 export { Header, SearchInput };

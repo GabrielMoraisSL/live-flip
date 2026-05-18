@@ -1,7 +1,7 @@
-import { Column } from '@/components/column';
-import { Row } from '@/components/row';
+import { Column } from '@/components/column.component';
+import { Row } from '@/components/row.component';
 import dayjs from 'dayjs';
-import TrickCard from './trick-card';
+import TrickCard from './trick-card.component';
 
 interface TricksListProps {
   lastUnLockedTrick: {

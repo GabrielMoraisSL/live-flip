@@ -1,5 +1,5 @@
-import { Column } from "@/components/column";
-import UserCard from "@/components/user-card";
+import { Column } from "@/components/column.component";
+import UserCard from "@/components/user-card.component";
 import { MOCK_USERS } from "@/features/user/mocks";
 
 export default function UsersList() {

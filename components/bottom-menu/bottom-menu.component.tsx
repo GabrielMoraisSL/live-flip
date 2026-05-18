@@ -1,7 +1,7 @@
 'use client';
 import { SCREENS_ITEMS } from '@/features/sidebar/constants';
-import { Row } from '../row';
-import MenuItem from './menu-item';
+import { Row } from '../row.component';
+import MenuItem from './menu-item.component';
 
 export default function BottomMenu() {
   return (
