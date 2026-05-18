@@ -1,6 +1,6 @@
 import { Column } from '@/components/column';
 import { Row } from '@/components/row';
-import { MOCK_PUBLICATIONS } from '@/features/publications/mocks/publications';
+import { MOCK_PUBLICATIONS } from '@/features/publications/mocks/publications.mock';
 import AddPublicationButton from './add-publication-button';
 import InfoCard from './info-card';
 import PublicationCard from './public-card';

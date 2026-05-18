@@ -1,6 +1,6 @@
 import { Column } from "@/components/column";
 import UserCard from "@/components/user-card";
-import { MOCK_USERS } from "@/features/user/mocks";
+import { MOCK_USERS } from "@/features/user/mocks/index,mock";
 
 export default function UsersList() {
   return (

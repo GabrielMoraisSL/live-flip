@@ -1,5 +1,5 @@
 'use client';
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/cn.utils';
 import { useRef, useState } from 'react';
 import { FaFire, FaLocationDot } from 'react-icons/fa6';
 import { Column } from '../../../components/column';
