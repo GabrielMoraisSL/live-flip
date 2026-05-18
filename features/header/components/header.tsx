@@ -1,9 +1,9 @@
 'use client';
 import { FaBars } from 'react-icons/fa6';
 import { Row } from '@/components/row';
-import { useSidebarStore } from '@/features/sidebar/stores';
+import { useSidebarStore } from '@/features/sidebar/stores/index.store';
 import SearchInput from '@/components/search-input';
-import { SystemEnums } from '@/enums/system-enums';
+import { SystemEnums } from '@/enums/system.enum';
 
 const SearchInputIds = SystemEnums.EnumsIds.SearchInput;
 

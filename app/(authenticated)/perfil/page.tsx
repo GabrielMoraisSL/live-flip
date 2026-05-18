@@ -1,6 +1,6 @@
 import { Column } from '@/components/column';
 import { KPIs, PersonalData, TricksList } from '@/features/profile/components';
-import { USER_MOCK } from '@/features/profile/mocks';
+import { USER_MOCK } from '@/features/profile/mocks/index.mock';
 export default function Profile() {
   const {
     username,

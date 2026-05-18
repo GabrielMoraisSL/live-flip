@@ -1,5 +1,5 @@
 'use client';
-import { SCREENS_ITEMS } from '@/features/sidebar/constants';
+import { SCREENS_ITEMS } from '@/features/sidebar/constants/index.constant';
 import { Row } from '../row';
 import MenuItem from './menu-item';
 
