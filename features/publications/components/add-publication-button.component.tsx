@@ -31,7 +31,7 @@ export default function AddPublicationButton() {
         className={cn(
           'hidden',
           !isVisible &&
-            'block px-6 py-2 cursor-pointer bg-gray-100 rounded-full font-bold text-nowrap uppercase fixed bottom-18 xl:bottom-10 right-5 xl:right-10 z-30 shadow-lg text-xl xl:text-lg p-4 animate-bounce-in transition-all',
+            'block px-6 py-2 cursor-pointer bg-gray-100 rounded-full font-bold text-nowrap uppercase fixed bottom-22 sm:bottom-18 xl:bottom-10 right-5 xl:right-10 z-30 shadow-lg text-xl xl:text-lg p-4 animate-bounce-in transition-all',
         )}
       >
         <Row>

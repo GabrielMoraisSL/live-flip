@@ -38,8 +38,8 @@ export const Sidebar = () => {
           <p className='text-xl sm:text-2xl text-brand-secondary'>
             @{username}
           </p>
-          <p className='text-sm text-neutral-500'>{instance}</p>
-          <p className='text-sm text-neutral-500'>{location}</p>
+          <p className='text-xs sm:text-sm text-neutral-500'>{instance}</p>
+          <p className='text-xs sm:text-sm text-neutral-500'>{location}</p>
         </Column>
         <Column className='h-full border-y border-neutral-800'>
           {SCREENS_ITEMS.map((option) => (
