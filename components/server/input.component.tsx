@@ -2,7 +2,6 @@
 import { cva, type VariantProps } from 'class-variance-authority';
 import { clsx } from 'clsx';
 import { useState } from 'react';
-import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa6';
 import { LuEye, LuEyeClosed } from 'react-icons/lu';
 
 const inputVariants = cva(
@@ -27,7 +26,7 @@ const inputVariants = cva(
 type InputProps = React.InputHTMLAttributes<HTMLInputElement> &
   VariantProps<typeof inputVariants>;
 
-export default function Input({ variant, className, ...props }: InputProps) {
+export const Input = ({ variant, className, ...props }: InputProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const isPassword = props.type === 'password';
 
@@ -58,4 +57,4 @@ export default function Input({ variant, className, ...props }: InputProps) {
       )}
     </div>
   );
-}
+};

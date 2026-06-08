@@ -2,9 +2,9 @@
 import { cn } from '@/lib/cn.utils';
 import { useRef, useState } from 'react';
 import { FaFire, FaLocationDot } from 'react-icons/fa6';
-import { Column } from '../../../components/column.component';
-import { Row } from '../../../components/row.component';
-import PublicCardSkeleton from './public-card-skeleton.component';
+import { Column } from '../../../components/server/column.component';
+import { Row } from '../../../components/server/row.component';
+import { PublicCardSkeleton } from './public-card-skeleton.component';
 import { IoMdPlay } from 'react-icons/io';
 import { MdPlayArrow } from 'react-icons/md';
 
@@ -18,7 +18,7 @@ interface PublicCardProps {
   isLoading?: boolean;
 }
 
-export default function PublicationCard({
+export const PublicationCard = ({
   likes,
   achievement,
   title,
@@ -26,7 +26,7 @@ export default function PublicationCard({
   localization,
   video,
   isLoading,
-}: PublicCardProps) {
+}: PublicCardProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [localLikes, setLocalLikes] = useState<number[]>(likes);
   const userId = 1; // substituir pelo ID real do usuário autenticado
@@ -127,4 +127,4 @@ export default function PublicationCard({
       </Column>
     </Column>
   );
-}
+};

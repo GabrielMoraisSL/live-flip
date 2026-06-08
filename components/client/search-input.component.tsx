@@ -1,6 +1,6 @@
 'use client';
 
-import { Row } from '@/components/row.component';
+import { Row } from '@/components/server/row.component';
 import { SystemEnums } from '@/enums/system.enum';
 import { getOrDefault, useSearchStore } from '@/stores/search.store';
 import { FaSearch } from 'react-icons/fa';
@@ -11,7 +11,7 @@ interface SearchInputProps {
   id: SearchInputIds;
 }
 
-export default function SearchInput({ id }: SearchInputProps) {
+export const SearchInput = ({ id }: SearchInputProps) => {
   const { setSearchText, stores } = useSearchStore();
   const searchState = getOrDefault(stores, id);
   return (
@@ -28,4 +28,4 @@ export default function SearchInput({ id }: SearchInputProps) {
       </Row>
     </div>
   );
-}
+};

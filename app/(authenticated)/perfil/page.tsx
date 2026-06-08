@@ -1,4 +1,4 @@
-import { Column } from '@/components/column.component';
+import { Column } from '@/components/server/column.component';
 import { KPIs, PersonalData, TricksList } from '@/features/profile/components';
 import { USER_MOCK } from '@/features/profile/mocks';
 export default function Profile() {

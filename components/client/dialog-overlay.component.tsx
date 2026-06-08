@@ -1,12 +1,12 @@
 import { cn } from '@/lib/cn.utils';
 
-export default function DialogOverlay({
+export const DialogOverlay = ({
   isOpen,
   close,
 }: {
   isOpen: boolean;
   close: () => void;
-}) {
+}) => {
   return (
     <div
       className={cn(
@@ -19,4 +19,4 @@ export default function DialogOverlay({
       onClick={close}
     />
   );
-}
+};

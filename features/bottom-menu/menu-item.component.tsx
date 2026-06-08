@@ -1,9 +1,10 @@
+'use client';
 import { cn } from '@/lib/cn.utils';
 import { usePathname, useRouter } from 'next/navigation';
-import { Column } from '../column.component';
+import { Column } from '@/components/server';
 import { ScreensItemsType } from '@/features/sidebar/constants/screens-items.constant';
 
-export default function MenuItem({ icon, label, route }: ScreensItemsType) {
+export const MenuItem = ({ icon, route }: ScreensItemsType) => {
   const router = useRouter();
   const activeOption = usePathname();
   return (
@@ -19,4 +20,4 @@ export default function MenuItem({ icon, label, route }: ScreensItemsType) {
       </Column>
     </div>
   );
-}
+};

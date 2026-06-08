@@ -1,14 +1,14 @@
 'use client';
 import { FaSignOutAlt } from 'react-icons/fa';
-import SidebarItem from './sidebar-item.component';
+import { SidebarItem } from './sidebar-item.component';
 import { cn } from '@/lib/cn.utils';
 import { useSidebarStore } from '@/features/sidebar/stores/sidebar.store';
-import { Column } from '@/components/column.component';
-import { Row } from '@/components/row.component';
+import { Column } from '@/components/server/column.component';
+import { Row } from '@/components/server/row.component';
 import { SCREENS_ITEMS } from '../constants';
-import DialogOverlay from '@/components/dialog-overlay.component';
 import { USER_MOCK } from '@/features/profile/mocks';
 import Image from 'next/image';
+import { DialogOverlay } from '@/components/client';
 
 export const Sidebar = () => {
   const { isOpen, close } = useSidebarStore();
