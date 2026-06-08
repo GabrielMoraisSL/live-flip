@@ -1,6 +1,6 @@
-import Timeline from './timeline.component';
-import UsersList from './users-list.component';
-import InfoCard from './info-card.component';
-import PublicationCard from './public-card.component';
-
-export { Timeline, UsersList, InfoCard, PublicationCard };
+export { Timeline } from './timeline.component';
+export { UsersList } from './users-list.component';
+export { AddPublicationButton } from './add-publication-button.component';
+export { InfoCard } from './info-card.component';
+export { PublicCardSkeleton } from './public-card-skeleton.component';
+export { PublicationCard } from './public-card.component';

@@ -1,3 +1,2 @@
-import { Sidebar } from './sidebar.component';
-
-export { Sidebar };
+export { Sidebar } from './sidebar.component';
+export { SidebarItem } from './sidebar-item.component';

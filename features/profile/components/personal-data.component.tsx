@@ -1,4 +1,4 @@
-import { Column } from '@/components/column.component';
+import { Column } from '@/components/server/column.component';
 import Image, { StaticImageData } from 'next/image';
 import UserImage from '@/public/teste-publi.jpg';
 
@@ -10,13 +10,13 @@ interface PersonalDataProps {
   photoUrl?: string | StaticImageData;
 }
 
-export default function PersonalData({
+export const PersonalData = ({
   username,
   name,
   location,
   instance,
   photoUrl,
-}: PersonalDataProps) {
+}: PersonalDataProps) => {
   return (
     <>
       <Column className='gap-3 max-lg:items-center max-lg:justify-center max-lg:mx-auto'>
@@ -31,7 +31,9 @@ export default function PersonalData({
             />
           </div>
         </div>
-        <p className='text-brand-secondary text-3xl sm:text-4xl normal-case'>@{username}</p>
+        <p className='text-brand-secondary text-3xl sm:text-4xl normal-case'>
+          @{username}
+        </p>
       </Column>
       <Column className='bg-black/15 text-sm sm:text-base p-4 lg:w-2/3 rounded-r-md text-gray-500 uppercase border-l-2 border-brand-primary pl-4 gap-2'>
         <p>
@@ -46,4 +48,4 @@ export default function PersonalData({
       </Column>
     </>
   );
-}
+};

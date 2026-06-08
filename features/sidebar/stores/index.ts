@@ -1,3 +1,1 @@
-import { useSidebarStore } from './sidebar.store';
-
-export { useSidebarStore };
+export { useSidebarStore } from './sidebar.store';

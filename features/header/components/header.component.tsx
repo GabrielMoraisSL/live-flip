@@ -1,13 +1,13 @@
 'use client';
 import { FaBars } from 'react-icons/fa6';
-import { Row } from '@/components/row.component';
+import { Row } from '@/components/server/row.component';
 import { useSidebarStore } from '@/features/sidebar/stores';
-import SearchInput from '@/components/search-input.component';
 import { SystemEnums } from '@/enums/system.enum';
+import { SearchInput } from '@/components/client';
 
 const SearchInputIds = SystemEnums.EnumsIds.SearchInput;
 
-export function Header() {
+export const Header = () => {
   const { toggle } = useSidebarStore();
   return (
     <Row className='uppercase relative min-w-full h-16 justify-between px-10 border-b border-neutral-700 bg-black text-gray-300'>
@@ -24,4 +24,4 @@ export function Header() {
       </Row>
     </Row>
   );
-}
+};

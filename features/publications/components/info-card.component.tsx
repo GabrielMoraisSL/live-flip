@@ -1,8 +1,8 @@
-import { Row } from '@/components/row.component';
+import { Row } from '@/components/server/row.component';
 import { FaTrophy } from 'react-icons/fa6';
 import { HiOutlineSparkles } from 'react-icons/hi';
 
-export default function InfoCard() {
+export const InfoCard = () => {
   return (
     <Row className='p-5 gap-4 bg-brand-neutral-850 rounded-lg border border-neutral-800 relative md:max-w-2xl'>
       <div className='p-3 bg-brand-primary/10 text-brand-primary rounded-full border border-brand-primary/20'>
@@ -18,4 +18,4 @@ export default function InfoCard() {
       </div>
     </Row>
   );
-}
+};

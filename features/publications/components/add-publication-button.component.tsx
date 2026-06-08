@@ -1,10 +1,10 @@
 'use client';
-import { Row } from '@/components/row.component';
+import { Row } from '@/components/server/row.component';
 import { cn } from '@/lib/cn.utils';
 import { useEffect, useRef, useState } from 'react';
 import { FaPlus } from 'react-icons/fa6';
 
-export default function AddPublicationButton() {
+export const AddPublicationButton = () => {
   const anchorRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(true);
 
@@ -41,4 +41,4 @@ export default function AddPublicationButton() {
       </button>
     </>
   );
-}
+};

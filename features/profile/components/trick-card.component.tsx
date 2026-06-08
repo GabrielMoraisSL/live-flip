@@ -1,4 +1,4 @@
-import { Column } from '@/components/column.component';
+import { Column } from '@/components/server/column.component';
 import { cn } from '@/lib/cn.utils';
 import { FaFire } from 'react-icons/fa6';
 
@@ -9,12 +9,12 @@ interface TrickCardProps {
   isNew: boolean;
 }
 
-export default function TrickCard({
+export const TrickCard = ({
   isNew,
   isUnlocked,
   name,
   points,
-}: TrickCardProps) {
+}: TrickCardProps) => {
   return (
     <Column className='gap-2 min-w-34 p-4 pt-6 text-center items-center border shadow-hard relative bg-neutral-800 border-gray-600'>
       {isNew && (
@@ -32,4 +32,4 @@ export default function TrickCard({
       <span className='text-gray-300'>{name}</span>
     </Column>
   );
-}
+};

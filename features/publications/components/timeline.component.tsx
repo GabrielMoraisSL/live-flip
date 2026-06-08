@@ -1,11 +1,11 @@
-import { Column } from '@/components/column.component';
-import { Row } from '@/components/row.component';
+import { Column } from '@/components/server/column.component';
+import { Row } from '@/components/server/row.component';
 import { MOCK_PUBLICATIONS } from '@/features/publications/mocks/publications.mock';
-import AddPublicationButton from './add-publication-button.component';
-import InfoCard from './info-card.component';
-import PublicationCard from './public-card.component';
+import { AddPublicationButton } from './add-publication-button.component';
+import { InfoCard } from './info-card.component';
+import { PublicationCard } from './public-card.component';
 
-export default function Timeline() {
+export const Timeline = () => {
   return (
     <Column className='flex-1 min-h-0 overflow-y-auto gap-6 p-5 pb-2 mr-0 pr-6 md:p-10 h-full'>
       <InfoCard />
@@ -23,4 +23,4 @@ export default function Timeline() {
       {/* <PublicCardSkeleton /> */}
     </Column>
   );
-}
+};

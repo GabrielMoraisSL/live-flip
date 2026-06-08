@@ -1,7 +1,7 @@
-import { Column } from '@/components/column.component';
-import { Row } from '@/components/row.component';
+import { Column } from '@/components/server/column.component';
+import { Row } from '@/components/server/row.component';
 import dayjs from 'dayjs';
-import TrickCard from './trick-card.component';
+import { TrickCard } from './trick-card.component';
 
 interface TricksListProps {
   lastUnLockedTrick: {
@@ -49,7 +49,7 @@ const mockTricks = [
   },
 ];
 
-export default function TricksList({ lastUnLockedTrick }: TricksListProps) {
+export const TricksList = ({ lastUnLockedTrick }: TricksListProps) => {
   return (
     <Column className='gap-5 w-full'>
       <Column className='md:flex-row text-xl sm:text-2xl text-gray-300 w-full border-b border-neutral-700 pb-4 uppercase justify-between max-md:gap-3 md:items-end'>
@@ -78,4 +78,4 @@ export default function TricksList({ lastUnLockedTrick }: TricksListProps) {
       </Column>
     </Column>
   );
-}
+};
