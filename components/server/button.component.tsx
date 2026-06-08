@@ -1,4 +1,3 @@
-import { SystemEnums } from "@/enums/system.enum";
 import { cva, type VariantProps } from "class-variance-authority";
 import { clsx } from "clsx";
 

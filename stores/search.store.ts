@@ -1,7 +1,4 @@
-import { SystemEnums } from '@/enums/system.enum';
 import { create } from 'zustand';
-
-type SearchInputIds = SystemEnums.EnumsIds.SearchInput;
 
 interface SearchState {
   isOpen: boolean;
@@ -9,11 +6,11 @@ interface SearchState {
 }
 
 interface SearchStore {
-  stores: Partial<Record<SearchInputIds, SearchState>>;
-  setSearchText: (id: SearchInputIds, value: string) => void;
-  open: (id: SearchInputIds) => void;
-  close: (id: SearchInputIds) => void;
-  toggle: (id: SearchInputIds) => void;
+  stores: Partial<Record<string, SearchState>>;
+  setSearchText: (id: string, value: string) => void;
+  open: (id: string) => void;
+  close: (id: string) => void;
+  toggle: (id: string) => void;
 }
 
 const defaultState: SearchState = {
@@ -22,8 +19,8 @@ const defaultState: SearchState = {
 };
 
 export const getOrDefault = (
-  stores: Partial<Record<SearchInputIds, SearchState>>,
-  id: SearchInputIds,
+  stores: Partial<Record<string, SearchState>>,
+  id: string,
 ) => stores[id] ?? defaultState;
 
 export const useSearchStore = create<SearchStore>()((set) => ({
