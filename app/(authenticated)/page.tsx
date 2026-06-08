@@ -1,4 +1,4 @@
-import { Row } from '@/components/row.component';
+import { Row } from '@/components/server';
 import { Timeline } from '@/features/publications/components';
 
 export default function Principal() {
