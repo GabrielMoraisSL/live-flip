@@ -1,5 +1,5 @@
-import { Column } from '@/components/server/column.component';
-import { Row } from '@/components/server/row.component';
+import { Column } from '@/components/server';
+import { Row } from '@/components/server';
 import dayjs from 'dayjs';
 import { TrickCard } from './trick-card.component';
 

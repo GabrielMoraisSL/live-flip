@@ -1,14 +1,11 @@
 'use client';
 
-import { Row } from '@/components/server/row.component';
-import { SystemEnums } from '@/enums/system.enum';
+import { Row } from '@/components/server';
 import { getOrDefault, useSearchStore } from '@/stores/search.store';
 import { FaSearch } from 'react-icons/fa';
 
-type SearchInputIds = SystemEnums.EnumsIds.SearchInput;
-
 interface SearchInputProps {
-  id: SearchInputIds;
+  id: string;
 }
 
 export const SearchInput = ({ id }: SearchInputProps) => {

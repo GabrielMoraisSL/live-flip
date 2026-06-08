@@ -1,4 +1,4 @@
-import { Column } from '@/components/server/column.component';
+import { Column } from '@/components/server';
 import { cn } from '@/lib/cn.utils';
 import { FaFire } from 'react-icons/fa6';
 

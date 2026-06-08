@@ -1,5 +1,5 @@
-import { Column } from '@/components/server/column.component';
-import { Row } from '@/components/server/row.component';
+import { Column } from '@/components/server';
+import { Row } from '@/components/server';
 import { MOCK_PUBLICATIONS } from '@/features/publications/mocks/publications.mock';
 import { AddPublicationButton } from './add-publication-button.component';
 import { InfoCard } from './info-card.component';

@@ -1,5 +1,5 @@
 import { UserCard } from '@/components/client';
-import { Column } from '@/components/server/column.component';
+import { Column } from '@/components/server';
 import { MOCK_USERS } from '@/features/user/mocks';
 
 export const UsersList = () => {
@@ -13,4 +13,4 @@ export const UsersList = () => {
       </Column>
     </Column>
   );
-}
+};
