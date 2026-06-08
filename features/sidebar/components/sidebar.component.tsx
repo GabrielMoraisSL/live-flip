@@ -1,47 +1,18 @@
 'use client';
+import { Column } from '@/components/server';
+import { Row } from '@/components/server';
 import { FaSignOutAlt } from 'react-icons/fa';
-import { SidebarItem } from './sidebar-item.component';
-import { cn } from '@/lib/cn.utils';
-import { useSidebarStore } from '@/features/sidebar/stores/sidebar.store';
-import { Column } from '@/components/server/column.component';
-import { Row } from '@/components/server/row.component';
 import { SCREENS_ITEMS } from '../constants';
-import { USER_MOCK } from '@/features/profile/mocks';
-import Image from 'next/image';
-import { DialogOverlay } from '@/components/client';
+import { SidebarItem } from './sidebar-item.component';
 
 export const Sidebar = () => {
-  const { isOpen, close } = useSidebarStore();
-  const { instance, location, photoUrl, username } = USER_MOCK;
   return (
     <>
-      <DialogOverlay isOpen={isOpen} close={close} />
-
-      <Column
-        className={cn(
-          'flex absolute lg:relative border-r-2 border-brand-primary z-50 uppercase top-0 h-dvh sm:h-full text-gray-300 transition-transform duration-200 bg-neutral-950 w-[80%] sm:w-sm lg:w-2xs self-stretch',
-          isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0',
-        )}
-      >
-        <Column className='justify-center font-bold p-5 gap-1'>
-          <div className='flex items-center justify-center mb-4 mx-auto size-30 rounded-full border-2 border-dashed border-brand-primary p-2'>
-            <div className='w-full h-full rounded-full overflow-hidden'>
-              <Image
-                alt='user-image'
-                src={photoUrl}
-                width={150}
-                height={150}
-                className='object-cover w-full h-full'
-              />
-            </div>
-          </div>
-          <p className='text-xl sm:text-2xl text-brand-secondary'>
-            @{username}
-          </p>
-          <p className='text-xs sm:text-sm text-neutral-500'>{instance}</p>
-          <p className='text-xs sm:text-sm text-neutral-500'>{location}</p>
-        </Column>
-        <Column className='h-full border-y border-neutral-800'>
+      <Column className='max-lg:hidden flex absolute lg:relative border-r border-brand-primary z-50 uppercase top-0 h-dvh sm:h-full text-gray-300 transition-transform duration-200 bg-neutral-950 w-[80%] sm:w-sm lg:w-3xs self-stretch'>
+        <h1 className='text-brand-primary text-2xl sm:text-3xl font-bold italic max-lg:text-center m-5'>
+          LiveFlip
+        </h1>
+        <Column className='h-full border-y border-neutral-800 py-2'>
           {SCREENS_ITEMS.map((option) => (
             <SidebarItem key={option.label} option={option} />
           ))}
