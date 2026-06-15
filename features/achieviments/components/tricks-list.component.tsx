@@ -12,10 +12,10 @@ export const TricksList = () => {
     states: { data, activeTab },
     handlers: { setActiveTab },
   } = useTricksByInstance();
-
+  111;
   return (
-    <Column className='gap-10'>
-      <Row className='gap-2'>
+    <Column className='gap-6 sm:gap-10'>
+      <Row className='max-sm:grid grid-cols-4 gap-2'>
         {Object.values(ValuesEnums.Instances).map((instance) => {
           const isActive = activeTab === instance;
           return (
@@ -27,24 +27,26 @@ export const TricksList = () => {
                 setActiveTab(instance);
               }}
               className={cn(
-                'flex items-center px-6 py-2 cursor-pointer bg-neutral-900 text-sm font-semibold text-neutral-300 uppercase',
+                'flex items-center text-center max-sm:text-xs sm:px-6 py-2 cursor-pointer bg-neutral-900 text-sm font-semibold text-neutral-300 uppercase',
                 isActive && 'bg-brand-primary cursor-default',
               )}
             >
-              <span className='pt-1'>{InstancesLabelsMapper[instance]}</span>
+              <span className='mx-auto'>{InstancesLabelsMapper[instance]}</span>
             </button>
           );
         })}
       </Row>
-      <Column className='w-1/2 gap-2 bg-neutral-900/50 p-5 rounded-lg'>
+      <Column className='lg:w-1/2 gap-2 bg-neutral-900/50 p-5 rounded-lg'>
         <Row className='justify-between w-full font-bold'>
-          <p className='text-xl text-neutral-400 capitalize'>Progresso: {activeTab}</p>
+          <p className='text-xl text-neutral-400 capitalize'>
+            Progresso: {activeTab}
+          </p>
           <h3 className='text-4xl text-brand-primary'>{data?.percentage}%</h3>
         </Row>
         <ProgressBar percent={data?.percentage} />
       </Column>
       <LoadingWrapper isLoading={false}>
-        <div className='grid grid-cols-4 gap-4'>
+        <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-4'>
           {data?.tricks.map((trick) => (
             <TrickCard key={trick.id} {...trick} />
           ))}

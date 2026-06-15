@@ -13,7 +13,7 @@ export default function Profile() {
   } = USER_MOCK;
 
   return (
-    <Column className='font-bold 2xl:flex-row gap-10 p-5 sm:p-10 2xl:p-0 2xl:m-10 w-full lg:pb-10 overflow-auto'>
+    <Column className='font-bold 2xl:flex-row gap-10 p-5 sm:p-10 2xl:p-0 2xl:m-10 w-full lg:pb-10 overflow-auto outline-none'>
       <Column className='gap-6 w-full'>
         <PersonalData {...{ username, name, location, instance, photoUrl }} />
         <KPIs {...kpis} lastUnLockedTrick={lastUnLockedTrick} />

@@ -28,7 +28,7 @@ export const TrickCard = ({
       </Row>
       <Row className='justify-between w-full'>
         <Column className='gap-2'>
-          <p className='text-3xl font-bold break-all'>{name}</p>
+          <p className='text-3xl font-bold'>{name} </p>
           <p className={cn('text-xs text-gray-300', isUnlocked && 'text-neutral-900')}>{description}</p>
         </Column>
       </Row>

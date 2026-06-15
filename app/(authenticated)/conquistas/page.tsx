@@ -3,9 +3,9 @@ import { ProgressInfo, TricksList } from '@/features/achieviments/components';
 
 export default function Achieviments() {
   return (
-    <Column className='text-neutral-200 gap-8 p-5 sm:p-10 w-full max-lg:pb-10 overflow-auto'>
-      <Column className='gap-5 w-2/3'>
-        <h2 className='font-bold text-7xl uppercase'>
+    <Column className='text-neutral-200 gap-8 p-5 sm:p-10 w-full max-lg:pb-10 overflow-auto outline-none'>
+      <Column className='gap-5 sm:w-2/3'>
+        <h2 className='font-bold text-5xl sm:text-7xl uppercase'>
           Livro de <br />
           <span className='text-brand-primary italic'>Manobras</span>
         </h2>

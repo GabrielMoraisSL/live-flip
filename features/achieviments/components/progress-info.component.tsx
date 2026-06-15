@@ -13,7 +13,7 @@ export const ProgressInfo = () => {
   const percentageByTotals = calculatePercentage(totalUnlockeds, total);
 
   return (
-    <Column className='w-1/2 gap-2 bg-neutral-900/50 p-5 rounded-lg'>
+    <Column className='sm:w-1/2 gap-2 bg-neutral-900/50 p-5 rounded-lg'>
       <Row className='justify-between w-full font-bold'>
         <p className='text-xl text-neutral-400'>
           Conclusão total
