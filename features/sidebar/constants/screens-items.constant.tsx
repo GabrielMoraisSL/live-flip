@@ -1,34 +1,30 @@
-import { SystemEnums } from '@/enums/system.enum';
-import { MedalIcon } from '@/public/svg/medal';
+import { LabelsEnums } from '@/enums/labels';
+import { ValuesEnums } from '@/enums/values';
 import { AiFillHome } from 'react-icons/ai';
 import { BiMedal } from 'react-icons/bi';
-import { FaSearch } from 'react-icons/fa';
 import { FaRegUser } from 'react-icons/fa6';
 import { IoSearch } from 'react-icons/io5';
-
-const { Routes, PagesItems } = SystemEnums.EnumsValues;
 
 export const SCREENS_ITEMS = [
   {
     icon: <AiFillHome />,
-    label: PagesItems.Main,
-    route: Routes.Main,
+    label: LabelsEnums.PagesItems.Main,
+    route: ValuesEnums.Routes.Main,
   },
   {
     icon: <IoSearch />,
-    label: PagesItems.Search,
-    route: Routes.Search,
-    hideOnDesktop: true,
+    label: LabelsEnums.PagesItems.Search,
+    route: ValuesEnums.Routes.Search,
   },
   {
     icon: <BiMedal />,
-    label: PagesItems.Achievements,
-    route: Routes.Achievements,
+    label: LabelsEnums.PagesItems.Achievements,
+    route: ValuesEnums.Routes.Achievements,
   },
   {
-    icon: <FaRegUser className='size-5!' />,
-    label: PagesItems.Profile,
-    route: Routes.Profile,
+    icon: <FaRegUser />,
+    label: LabelsEnums.PagesItems.Profile,
+    route: ValuesEnums.Routes.Profile,
   },
 ];
 

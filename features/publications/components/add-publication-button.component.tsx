@@ -1,5 +1,5 @@
 'use client';
-import { Row } from '@/components/server/row.component';
+import { Row } from '@/components/server';
 import { cn } from '@/lib/cn.utils';
 import { useEffect, useRef, useState } from 'react';
 import { FaPlus } from 'react-icons/fa6';

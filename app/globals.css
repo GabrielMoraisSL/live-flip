@@ -131,6 +131,19 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  border: 4px solid #e5e5e5;
+  border-top-color: #000;
+  animation: spin 0.9s linear infinite;
+}
+
 @media (max-width: 768px) {
   ::-webkit-scrollbar {
     width: 0px;

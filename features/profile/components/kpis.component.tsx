@@ -1,5 +1,5 @@
-import { Column } from '@/components/server/column.component';
-import { Row } from '@/components/server/row.component';
+import { Column } from '@/components/server';
+import { Row } from '@/components/server';
 import { MedalIcon } from '@/public/svg/medal';
 import { FaFire } from 'react-icons/fa6';
 
@@ -55,4 +55,4 @@ export const KPIs = ({
       </Row>
     </>
   );
-}
+};

@@ -1,0 +1,1 @@
+export * from './instances-labels-mapper.constant';
