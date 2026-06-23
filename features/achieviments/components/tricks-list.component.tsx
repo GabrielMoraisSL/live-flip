@@ -1,41 +1,20 @@
 'use client';
+import { Tabs } from '@/components/client';
 import { Column, ProgressBar, Row } from '@/components/server';
-import { ValuesEnums } from '@/enums/values';
-import { cn } from '@/lib/cn.utils';
-import { InstancesLabelsMapper } from '../constants';
-import { TrickCard } from './trick-card.component';
-import { useTricksByInstance } from '../hooks';
 import { LoadingWrapper } from '@/components/server/wrappers/loading-wrapper.component';
+import { useTricksByInstance } from '../hooks';
+import { TrickCard } from './trick-card.component';
 
 export const TricksList = () => {
   const {
-    states: { data, activeTab },
+    states: { data, activeTab, tabOptions },
     handlers: { setActiveTab },
   } = useTricksByInstance();
-  111;
+
   return (
     <Column className='gap-6 sm:gap-10'>
-      <Row className='max-sm:grid grid-cols-4 gap-2'>
-        {Object.values(ValuesEnums.Instances).map((instance) => {
-          const isActive = activeTab === instance;
-          return (
-            <button
-              key={instance}
-              type='button'
-              onClick={() => {
-                if (isActive) return;
-                setActiveTab(instance);
-              }}
-              className={cn(
-                'flex items-center text-center max-sm:text-xs sm:px-6 py-2 cursor-pointer bg-neutral-900 text-sm font-semibold text-neutral-300 uppercase',
-                isActive && 'bg-brand-primary cursor-default',
-              )}
-            >
-              <span className='mx-auto'>{InstancesLabelsMapper[instance]}</span>
-            </button>
-          );
-        })}
-      </Row>
+      <Tabs options={tabOptions} value={activeTab} onChange={setActiveTab} />
+
       <Column className='lg:w-1/2 gap-2 bg-neutral-900/50 p-5 rounded-lg'>
         <Row className='justify-between w-full font-bold'>
           <p className='text-xl text-neutral-400 capitalize'>

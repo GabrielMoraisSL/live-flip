@@ -2,6 +2,7 @@ import { ValuesEnums } from '@/enums/values';
 import { baseTricks, fakieTricks, nollieTricks, switchTricks } from '../mocks';
 import { useState } from 'react';
 import { calculatePercentage } from '@/lib/helpers';
+import { InstancesLabelsMapper } from '../constants';
 
 export function useTricksByInstance() {
   const [activeTab, setActiveTab] = useState<ValuesEnums.Instances>(
@@ -43,10 +44,16 @@ export function useTricksByInstance() {
     percentage,
   };
 
+  const tabOptions = Object.values(ValuesEnums.Instances).map((instance) => ({
+    value: instance,
+    label: InstancesLabelsMapper[instance],
+  }));
+
   return {
     states: {
       data,
       activeTab,
+      tabOptions,
     },
     handlers: {
       setActiveTab,
