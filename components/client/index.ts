@@ -1,3 +1,4 @@
-export { DialogOverlay } from './dialog-overlay.component';
-export { SearchInput } from './search-input.component';
-export { UserCard } from './user-card.component';
+export * from './dialog-overlay.component';
+export * from './search-input.component';
+export * from './user-card.component';
+export * from './tabs.component';
