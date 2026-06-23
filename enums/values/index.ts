@@ -13,4 +13,14 @@ export namespace ValuesEnums {
     Nollie = 'nollie',
     Switch = 'switch',
   }
+
+  export enum SearchIds {
+    SearchPage = 'search-page',
+  }
+
+  export enum SearchOptions {
+    All = 'all',
+    Publications = 'publications',
+    Users = 'users',
+  }
 }
