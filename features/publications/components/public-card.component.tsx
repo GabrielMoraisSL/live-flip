@@ -5,7 +5,6 @@ import { FaFire, FaLocationDot } from 'react-icons/fa6';
 import { Column } from '../../../components/server/column.component';
 import { Row } from '../../../components/server/row.component';
 import { PublicCardSkeleton } from './public-card-skeleton.component';
-import { IoMdPlay } from 'react-icons/io';
 import { MdPlayArrow } from 'react-icons/md';
 
 interface PublicCardProps {
