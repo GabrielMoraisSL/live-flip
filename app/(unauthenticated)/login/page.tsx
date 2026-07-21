@@ -1,7 +1,43 @@
+'use client';
+
+import { useState } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { signIn } from 'next-auth/react';
 import { Button, Column, Input, Row } from '@/components/server';
 import { FaArrowRight, FaShieldHalved } from 'react-icons/fa6';
 
 export default function Login() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const callbackUrl = searchParams.get('callbackUrl') ?? '/';
+
+  const [identificador, setIdentificador] = useState('');
+  const [senha, setSenha] = useState('');
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setError(null);
+    setLoading(true);
+
+    const result = await signIn('credentials', {
+      identificador,
+      senha,
+      redirect: false,
+    });
+
+    setLoading(false);
+
+    if (result?.error) {
+      setError('Credenciais inválidas. Tente novamente.');
+      return;
+    }
+
+    router.push(callbackUrl);
+    router.refresh();
+  }
+
   return (
     <Column className='gap-14 pb-10 items-center overflow-hidden grow uppercase bg-linear-to-br from-brand-secondary font-grotesk justify-center'>
       <h1
@@ -34,37 +70,57 @@ export default function Login() {
               Apenas membros autorizados
             </h4>
           </Column>
-          <Column className='gap-6 text-gray-400'>
-            <Column className='gap-1'>
-              <label className='tracking-widest text-xs font-bold'>
-                Nome de usuário / E-mail
-              </label>
-              <Input placeholder='exemplo_123 / exemplo@emil.com' />
+          <form onSubmit={handleSubmit}>
+            <Column className='gap-6 text-gray-400'>
+              <Column className='gap-1'>
+                <label className='tracking-widest text-xs font-bold'>
+                  Nome de usuário / E-mail
+                </label>
+                <Input
+                  placeholder='exemplo_123 / exemplo@emil.com'
+                  value={identificador}
+                  onChange={(e) => setIdentificador(e.target.value)}
+                />
+              </Column>
+              <Column className='gap-1'>
+                <label className='tracking-widest text-xs font-bold'>
+                  Senha
+                </label>
+                <Input
+                  type='password'
+                  placeholder='*********'
+                  value={senha}
+                  onChange={(e) => setSenha(e.target.value)}
+                />
+              </Column>
+              {error && (
+                <p className='text-red-500 text-xs font-bold normal-case'>
+                  {error}
+                </p>
+              )}
             </Column>
-            <Column className='gap-1'>
-              <label className='tracking-widest text-xs font-bold'>Senha</label>
-              <Input type='password' placeholder='*********' />
+            <Column className='gap-4 mt-6'>
+              <Button variant='default' type='submit' disabled={loading}>
+                <Row className='gap-2 justify-between select-none text-black font-bold'>
+                  <span>{loading ? 'Entrando...' : 'Entrar'}</span>
+                  <FaArrowRight />
+                </Row>
+              </Button>
+              <Column className='gap-2 sm:gap-1 sm:flex-row text-xs text-gray-400 font-semibold items-start sm:items-center sm:justify-between'>
+                <button type='button' className='hover:underline'>
+                  Esqueceu as credenciais?
+                </button>
+                <button type='button' className='hover:underline'>
+                  Entrar para o LiveFlip
+                </button>
+              </Column>
             </Column>
-          </Column>
-          <Column className='gap-4'>
-            <Button variant='default'>
-              <Row className='gap-2 justify-between select-none text-black font-bold'>
-                <span>Entrar</span>
-                <FaArrowRight />
-              </Row>
-            </Button>
-            <Column className='gap-2 sm:gap-1 sm:flex-row text-xs text-gray-400 font-semibold items-start sm:items-center sm:justify-between'>
-              <button className='hover:underline'>
-                Esqueceu as credenciais?
-              </button>
-              <button className='hover:underline'>
-                Entrar para o LiveFlip
-              </button>
-            </Column>
-          </Column>
+          </form>
           <Row className='hidden sm:flex text-xs text-neutral-600 gap-2 justify-center'>
             <div className='bg-neutral-600 w-full h-px' />
-            <h4 className='text-nowrap'>2026 © Todos os direitos reservados</h4>
+            <h4 className='text-nowrap'>
+              2026 © Todos os direitos reservados
+            </h4>
             <div className='bg-neutral-600 w-full h-px' />
           </Row>
           <Row className='hidden md:flex absolute left-120 top-60 rotate-90 gap-0 tracking-[0.2em] text-nowrap text-xs text-gray-300 font-semibold'>
