@@ -1,9 +1,9 @@
 import { Column } from '@/components/server';
 import { Row } from '@/components/server';
-import { MOCK_PUBLICATIONS } from '@/features/publications/mocks/publications.mock';
 import { AddPublicationButton } from './add-publication-button.component';
 import { InfoCard } from './info-card.component';
 import { PublicationCard } from './public-card.component';
+import { MOCK_PUBLICATIONS } from '../mocks';
 
 export const Timeline = () => {
   return (
