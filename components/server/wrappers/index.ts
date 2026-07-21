@@ -1,1 +1,1 @@
-export { } from './loading-wrapper.component'
+export * from './loading-wrapper.component'
